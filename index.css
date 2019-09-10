@@ -1,0 +1,191 @@
+ body, html{
+    height: 100%;
+    margin: 0;
+    background-color: #696969;/*background color #803839 good red color */
+    text-align: center;
+    color: #D3D3D3;
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size:15px;
+    letter-spacing: 6px;
+    font-weight: bold;
+  }
+
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3B3C36; /* gainsbro fallback color */
+    background-color: rgba(105,105,105,.95); /* dimgray w/opacity */
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    }
+
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    }
+
+.fas{
+        font-size: 30px;
+        position: relative;
+        float: right;
+        margin: 10px;
+      }
+
+.name{
+        position: relative;
+        float: left;
+        font-size: 30px;
+        margin: 10px;
+    }
+
+.center{
+  position: absolute;
+	top:30%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: auto;
+}
+a{
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+a:link {
+  color: #D3D3D3;
+
+}
+
+a:visited {
+  color: #D3D3D3;
+
+}
+
+a:focus{
+
+}
+
+a:hover {
+  color: #D3D3D3;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #D3D3D3;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 30px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+.facebook {
+  background: #696969;
+  color: white;
+}
+
+.twitter {
+  background: #696969;
+  color: white;
+}
+
+.github {
+  background: #696969;
+  color: white;
+}
+
+.linkedin {
+  background: #696969;
+  color: white;
+}
+
+.codepen{
+  background: #696969;
+  color: white;
+}
+
+.instagram {
+  background: #696969;
+  color: white;
+}
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+p{
+  text-align: center;
+}
+/* Container for skill bars */
+.container {
+  width: 50%; /* Full width */
+  background-color: #ddd; /* Grey background */
+  margin-right: auto;
+    margin-left: auto;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #4CAF50;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 65%; background-color: #f44336;} /* Red */
+.php {width: 60%; background-color: #808080;} /* Dark Grey */
+
+.contact{
+
+}
