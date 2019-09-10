@@ -32,27 +32,36 @@
   <div class="center">
   <h1>How do you take your coffee?<h1>
     <div class="container">
-  <form method="post" action="contact.php">
+  <!-- form -->
+            <form name="contactForm" id="contactForm" method="post" action="">
+      			<fieldset>
 
-    <label for="fname">Name</label>
-    <input type="text" id="fname" name="name" placeholder="Your name..">
+                  <div class="form-field">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="">
+                  </div>
+                  <div class="form-field">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="">
+	               </div>
+                  <div class="form-field">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	               </div>                       
+                  <div class="form-field">
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required=""></textarea>
+	               </div>                      
+                 <div class="form-field">
+                     <button class="submitform">Send Message</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>                             
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
 
-    <label for="lname">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your email address..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit" name="submit">
-
-  </form>
+      			</fieldset>
+      		</form> <!-- Form End -->
 </div>
     </div>
 </body>
