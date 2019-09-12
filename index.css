@@ -1,3 +1,10 @@
+* {
+ box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
  body, html{
     height: 100%;
     margin: 0;
@@ -77,12 +84,11 @@
 .center{
   position: absolute;
 	top:30%;
-	
 	left: 0;
 	right: 0;
   margin: auto;
-	display: block;
-	padding-bottom: 100px;
+ display: block;
+ padding-bottom: 100px; /* height of your footer */
 }
 a{
   outline: none;
@@ -183,11 +189,17 @@ p{
   color: white; /* White text color */
 }
 
-.html {width: 90%; background-color: #4CAF50;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
+.html {width: 90%; background-color: #808000;} /* Green */
+.css {width: 90%; background-color: #1E90FF;} /* Blue */
+.js {width: 70%; background-color: #FF8C00;} /* Red */
+.php {width: 55%; background-color: #8B008B;} /* Dark Grey */
+.java {width: 80%; background-color: #6B8E23;}
+.cplus {width: 85%; background-color: #FF4500;}
+.python {width: 70%; background-color:#A52A2A;}
+.mysql {width: 65%; background-color: #B8860B;}
+.c {width: 60%; background-color: #BC8F8F;}
 
 .contact{
 
 }
+
