@@ -141,32 +141,34 @@ a:active {
   background-color: #000;
 }
 .facebook {
-  background: #696969;
+  background: #3B5998;
   color: white;
 }
 
 .twitter {
-  background: #696969;
+  background: #55acee;
   color: white;
 }
 
 .github {
-  background: #696969;
+  background: #333;
   color: white;
 }
 
 .linkedin {
-  background: #696969;
+  background: #007bb5;
   color: white;
 }
 
 .codepen{
-  background: #696969;
-  color: white;
+  background: gray;
+  color: black;
 }
 
 .instagram {
-  background: #696969;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
   color: white;
 }
 /* Make sure that padding behaves as expected */
@@ -192,7 +194,7 @@ p{
 .html {width: 90%; background-color: #808000;} /* Green */
 .css {width: 90%; background-color: #1E90FF;} /* Blue */
 .js {width: 70%; background-color: #FF8C00;} /* Red */
-.php {width: 60%; background-color: #8B008B;} /* Dark Grey */
+.php {width: 55%; background-color: #8B008B;} /* Dark Grey */
 .java {width: 80%; background-color: #6B8E23;}
 .cplus {width: 85%; background-color: #FF4500;}
 .python {width: 70%; background-color:#A52A2A;}
