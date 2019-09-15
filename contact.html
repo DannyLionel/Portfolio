@@ -28,33 +28,7 @@
     </div>
 
 </head>
-<body>
-  <div class="center">
-  <h1>How do you take your coffee?<h1>
-    <div class="container">
-  <form method="post" action="">
-
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name..">
-
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your email address..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit" name="submit">
-
-  </form>
-</div>
-      <?php
+    <?php
 $errors = '';
 $myemail = 'danny.lionel1@gmail.com';//<-----Put Your email address here.
 if(empty($_POST['name'])  ||
@@ -86,6 +60,33 @@ mail($to,$email_subject,$email_body,$headers);
 header('Location: contact.html');
 }
 ?>
+<body>
+  <div class="center">
+  <h1>How do you take your coffee?<h1>
+    <div class="container">
+  <form method="post" action="">
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email address..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit" name="submit">
+
+  </form>
+</div>
+      
     </div>
 </body>
 <html>
