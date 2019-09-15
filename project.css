@@ -87,11 +87,11 @@ h1 {
 }
 .img2{
   object-fit: fill;
-  width: 500x;
+  width: 500px;
   height: 500px;
 }
 .mySlides {display: none}
-img {vertical-align: middle;}
+.img2 {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
