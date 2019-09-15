@@ -1,5 +1,6 @@
 .mySlides {display: none}
-#img2 {vertical-align: middle;
+.img2 {
+  vertical-align: middle;
 object-fit: fill;
   width: 500px;
   height: 500px;
