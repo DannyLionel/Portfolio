@@ -86,7 +86,7 @@ h1 {
   }
 }
 img{
-  object-fit: fit;
+  object-fit: fill;
   width: 500x;
   height: 500px;
 }
