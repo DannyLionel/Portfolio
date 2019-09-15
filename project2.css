@@ -1,6 +1,5 @@
-* {box-sizing: border-box;}
 .mySlides {display: none}
-.img2 {vertical-align: middle;}
+#img2 {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -29,9 +28,6 @@
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
-.prev{
-  left:0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -65,7 +61,7 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #228b22;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
