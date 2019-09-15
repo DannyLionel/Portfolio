@@ -57,14 +57,14 @@ $headers = "From: $myemail\n";
 $headers .= "Reply-To: $email_address";
 mail($to,$email_subject,$email_body,$headers);
 //redirect to the 'thank you' page
-header('Location: contact.html');
+
 }
 ?>
 <body>
   <div class="center">
   <h1>How do you take your coffee?<h1>
     <div class="container">
-  <form method="post" action="">
+  <form method="post" action="contact.php">
 
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Your name..">
