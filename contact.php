@@ -1,33 +1,72 @@
 <?php
-$errors = '';
-$myemail = 'dhanushga.lionel@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['fname'])  ||
-   empty($_POST['email']) ||
-   empty($_POST['subject']))
-{
-    $errors .= "\n Error: all fields are required";
-}
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
+
+// Replace this with your own email address
+$siteOwnersEmail = 'dhanushga.lionel@gmail.com';
+
+
+if($_POST) {
+
+   $name = trim(stripslashes($_POST['name']));
+   $email = trim(stripslashes($_POST['email']));
+   $subject = trim(stripslashes($_POST['subject']));
+   
+
+   // Check Name
+	if (strlen($name) < 2) {
+		$error['name'] = "Please enter your name.";
+	}
+	// Check Email
+	if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
+		$error['email'] = "Please enter a valid email address.";
+	}
+	// Check Message
+	if (strlen($contact_message) < 15) {
+		$error['message'] = "Please enter your message. It should have at least 15 characters.";
+	}
+   // Subject
+	if ($subject == '') { $subject = "Contact Form Submission"; }
+
+
+   // Set Message
+   $message .= "Email from: " . $name . "<br /><br />";
+	$message .= "Email address: " . $email . "<br /><br />";
+   $message .= "Message: <br /><br />";
+   $message .= $contact_message;
+   $message .= "<br /><br /> ----- <br /><br /> The above email was sent using allansantosh.com.<br />";
+
+   // Set From: header
+   $from =  $name . " <" . $email . ">";
+
+   // Email Headers
+	$headers = "From: " . $from . "\r\n";
+	$headers .= "Reply-To: ". $email . "\r\n";
+ 	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+	$subject .= " -- Message From allansantosh.com";
+
+   if (!$error) {
+
+      ini_set("sendmail_from", $siteOwnersEmail); // for windows server
+      $mail = mail($siteOwnersEmail, $subject, $headers);
+
+		if ($mail) { echo "OK"; }
+      else { echo "Something went wrong. Please try again."; }
+		
+	} # end if - no validation error
+
+	else {
+
+		$response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
+		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
+		$response .= (isset($error['message'])) ? $error['subject'] . "<br />" : null;
+		
+		echo $response;
+
+	} # end if - there was a validation error
+
 }
 
-if( empty($errors))
-{
-$to = $myemail;
-$email_subject = "Contact form submission: $name";
-$email_body = "You have received a new message. ".
-" Here are the details:\n Name: $name \n ".
-"Email: $email_address\n Message \n $message";
-$headers = "From: $myemail\n";
-$headers .= "Reply-To: $email_address";
-mail($to,$email_subject,$email_body,$headers);
-//redirect to the 'thank you' page
-header('Location: contact-form-thank-you.html');
+?>;
 }
 ?>
