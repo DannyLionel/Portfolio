@@ -85,5 +85,10 @@ h1 {
     width: 100%;
   }
 }
+img{
+  object-fit: fill;
+  width: 250px;
+  height: 250px;
+}
 
 
