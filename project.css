@@ -3,7 +3,15 @@
 }
 
 body {
-    
+    height: 100%;
+    margin: 0;
+    background-color: #696969;/*background color #803839 good red color */
+    text-align: center;
+    color: #D3D3D3;
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size:15px;
+    letter-spacing: 6px;
+    font-weight: bold;
 
 }
 
